@@ -1,0 +1,14 @@
+# The following works out of the box if you use docker
+---
+development: &default
+  adapter: postgresql
+  encoding: unicode
+  database: storext
+  pool: 5
+  username: postgres
+  password:
+  host: localhost
+
+test:
+  <<: *default
+  database: app_test
